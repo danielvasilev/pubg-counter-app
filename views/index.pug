@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  p Date: 
+    span(style={color: 'blue'}) #{date}
+  p Cron job status: 
+    span(style={color: cronJob.statusColor}) #{cronJob.status}
+  p Mongodb status: 
+    span(style={color: mongoStatus.statusColor}) #{mongoStatus.status}
+  p Total players:
+    span(style={color: 'green'}) #{playersStatus.total}
+  p Processed players:
+    span(style={color: 'red'})  #{playersStatus.processed}
+  p Total matches:
+    span(style={color: 'green'}) #{matchesStatus.total}
+  p Processed matches:
+    span(style={color: 'red'}) #{matchesStatus.processed}
